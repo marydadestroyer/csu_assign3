@@ -12,30 +12,27 @@ app.use(bodyParser.urlencoded({ encoded: true}));
 var task = ["clean", "cook"];
 var complete = ["eat", "sleep"];
 
+var img = '';
+var title = '';
 
 app.get('/', function(req, res){
-    res.render('index',{task:task, complete:complete});
+    res.render('index',{img:img, title:title});
 });
 
-app.post('/addtask', function(req, res){
-    var newTask = req.body.newtask;
-    task.push(newTask);
-    res.redirect("/");
-});
 
-app.post('/removetask', function(req, res){
-    var completeTask = req.body.check;
-    if(typeof completeTask === "string"){
-        complete.push(completeTask);
-        task.splice(task.indexOf(completeTask), 1);
-    }else if(typeof completeTask === "object"){
-        for(var i = 0; i < completeTask.length ; i++){
-            complete.push(completeTask[i]);
-            task.splice(task.indexOf(completeTask[i]), 1);
-        }
-    }
-    res.redirect("/");
-});
+
+function fetchComic(){
+    fetch ('https://xkcd.com/614/info.0.json'
+        .then(res => res.json())
+        .then(thing =>{
+            img = thing.img;
+            title= thing.title;
+
+        }).catch(err =>{
+            res.redirect('/error');
+        })
+    )
+}
 
 http.createServer(app).listen(port, function(){
 
