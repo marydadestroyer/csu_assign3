@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Woods-Taylor/SSWNodejs.git"
+    "url": "git+https://github.com/marydadestroyer/SSWNodejs.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Woods-Taylor/SSWNodejs/issues"
+    "url": "https://github.com/marydadestroyer/SSWNodejs/issues"
   },
-  "homepage": "https://github.com/Woods-Taylor/SSWNodejs#readme",
+  "homepage": "https://github.com/marydadestroyer/SSWNodejs#readme",
   "engines": {
     "node": "10.x"
   },
