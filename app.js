@@ -1,9 +1,13 @@
-var http = require('http');
-var path = require('path');
+//var http = require('http');
+//var path = require('path');
 var express = require("express");
-var bodyParser = require("body-parser");
-const app = express();
-const port = process.env.PORT || 3000;
+var ejs = require('ejs');
+var fetch = require('node-fetch'); 
+//var bodyParser = require("body-parser");
+//const app = express();
+var app = express();
+//const port = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 
 app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
