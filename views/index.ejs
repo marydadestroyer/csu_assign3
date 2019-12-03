@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title> Assignment 3 </title>
+    <title> Assignment 4</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100"     rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet">
   </head>
@@ -20,20 +20,13 @@
     <div class="container">
        <div class="jumbotron jumbotron fluid">
         <h1 class="display-4">Comics?</h1> 
-        <h3 class="lead">Assignment 3</h3>
+        <h3 class="lead">Assignment 4</h3>
 
    
 
 
 
-       <form action ="/addtask" method="POST">
-        <input type="text" name="newtask" placeholder="add new task">        <button> Add Task </button>
-        <h2> Added Task </h2>
-            <% for(var i = 0; i < task.length; i++ ){ %>
-                <li><input type="checkbox" name="check" value="<%= task[i] %>"/><%= task[i] %></li>
-            <% } %>
-        <button formaction="/removetask" type="submit"> Remove </button>
-      </form>
+       
       <h2> Completed task </h2>
         <% for(var i = 0; i < complete.length; i++){ %>
             <li><%= complete[i] %></li>
