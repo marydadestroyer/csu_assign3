@@ -9,11 +9,11 @@ var app = express();
 //const port = process.env.PORT || 3000;
 var port = process.env.PORT || 3000;
 
-app.set('views', path.join(__dirname, 'views'));
+//app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
-app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ encoded: true}));
-
+//app.use(express.static("public"));
+//app.use(bodyParser.urlencoded({ encoded: true}));
+app.use(express.static(_dirmane +'/public'));
 
 var img = '';
 var title = '';
