@@ -1,5 +1,5 @@
 var http = require('http');
-var https = require('https');
+
 var request = require('request');
 var path = require('path');
 
@@ -8,9 +8,9 @@ var ejs = require('ejs');
 var fetch = require('node-fetch'); 
 
 var bodyParser = require("body-parser");
-//const app = express();
+
 var app = express();
-//const port = process.env.PORT || 3000;
+
 var port = process.env.PORT || 3000;
 
 app.set('views', path.join(__dirname, 'views'));
@@ -21,12 +21,36 @@ app.use(express.static(_dirmane +'/public'));
 
 var img = '';
 var title = '';
+var date = '';
+ //for homepage
+
+
+app.get('/', function(req, res){
+    getComic();
+    res.render(' index', {img: img, title: title, date: date});
+
+
+});
+
+
+funtion funComic (){
+    fetch('https://xkcd.com/info.0.json')
+    .then(res => res.json())
+    .then(data => {
+        date = data.date;
+        title = data.title;
+        url = data.url;
+
+    }).catch(err =>{
+	res.redirect('/error');
+    });
+}
 
 
 
 
 
 
-http.createServer(app).listen(port, function(){
+app.listen(port, function () {
 
 });
