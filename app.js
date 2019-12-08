@@ -9,8 +9,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ encoded: true}));
-var task = ["clean", "cook"];
-var complete = ["eat", "sleep"];
+
 
 var img = '';
 var title = '';
