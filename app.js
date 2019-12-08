@@ -1,16 +1,11 @@
 var http = require('http');
-
 var request = require('request');
-var path = require('path');
-
+//var path = require('path');
 var express = require("express");
 var ejs = require('ejs');
 var fetch = require('node-fetch'); 
-
 var bodyParser = require("body-parser");
-
 var app = express();
-
 var port = process.env.PORT || 3000;
 
 app.set('views', path.join(__dirname, 'views'));
