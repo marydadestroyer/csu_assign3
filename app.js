@@ -33,7 +33,7 @@ app.get('/', function(req, res){
 });
 
 
-funtion funComic (){
+/*funtion funComic (){
     fetch('https://xkcd.com/info.0.json')
     .then(res => res.json())
     .then(data => {
@@ -44,7 +44,8 @@ funtion funComic (){
     }).catch(err =>{
 	res.redirect('/error');
     });
-}
+}*/
+
 
 
 
